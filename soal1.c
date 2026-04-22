@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
+
 
 int sum(int *x, int n){
    int temp = 0;
@@ -40,8 +42,11 @@ int main(){
    if(N!=0){
       int x[N];
       for(int i =0; i < N; i++){
-         x[i] = (int)(strtok(NULL, " ")[0]-'0');
-      }
+         char *temp = strtok(NULL, " ");
+         if(temp != NULL){
+            x[i] = atoi(temp);
+   }
+}
       printf("\nSUM %d", sum(x, N));
       printf("\nAVG %0.2f", avg(x, N));
       printf("\nMAX %d", max(x, N));
