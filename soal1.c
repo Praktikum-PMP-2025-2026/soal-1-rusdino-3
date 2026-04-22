@@ -13,7 +13,7 @@ int sum(int *x, int n){
 }
 
 int max(int *x, int n){
-   int temp = 0;
+   int temp = -9999999;
    for(int i = 0; i <n; i++){
       if(*(x+i)>temp){
          temp = *(x+i);
